@@ -1,0 +1,13 @@
+dask-labextension
+jupyterlab-cpustatus
+@jupyter-widgets/jupyterlab-manager
+@deathbeds/jupyterlab-font-anonymous-pro
+@deathbeds/jupyterlab-font-dejavu-sans-mono
+@deathbeds/jupyterlab-font-fira-code
+@deathbeds/jupyterlab-fonts
+@deathbeds/jupyterlab-starters
+@jupyter-widgets/jupyterlab-manager
+@jupyterlab/toc
+@krassowski/jupyterlab-lsp
+nbdime-jupyterlab
+@jupyterlab/jupyterlab-git
