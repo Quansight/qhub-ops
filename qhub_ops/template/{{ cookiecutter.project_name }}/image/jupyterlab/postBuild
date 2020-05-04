@@ -6,7 +6,9 @@ jupyter nbextension enable --py widgetsnbextension --sys-prefix
 jupyter serverextension enable --sys-prefix jupyter_server_proxy
 
 # install jupyterlab extensions
-jupyter labextension install --clean $(cat requirements-labextension.txt)
+jupyter labextension install $(cat requirements-labextension.txt) --no-build
+jupyter labextension list
+jupyter lab build --debug
 
 # ====== cleanup labextension install =======
 rm -rf ${HOME}/.cache ${HOME}/.npm ${HOME}/.yarn
