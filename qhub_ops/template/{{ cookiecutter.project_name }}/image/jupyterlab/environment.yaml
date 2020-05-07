@@ -44,3 +44,7 @@ pytest-cov
 black
 isort
 importnb
+nbdime
+python-language-server
+jupyter-starters
+jupyter-lsp
