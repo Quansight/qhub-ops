@@ -1,51 +1,57 @@
+name: qhub-starters
+channels:
+- conda-forge
+dependencies:
 # general
-pip
+- pip
 
 # jupyterhub/jupyterlab
-nb_conda_kernels
-ipython > 7
-jupyter-server-proxy
-jupyterlab-git
-ipywidgets
-jupyterlab
-jupyter_client
-jupyter_console
-jupyterhub
-nodejs
-nbconvert
-nbval
-dask_labextension
+- nb_conda_kernels
+- ipython > 7
+- jupyter-server-proxy
+- jupyterlab-git
+- ipywidgets
+- jupyterlab
+- jupyter_client
+- jupyter_console
+- jupyterhub
+- nodejs
+- nbconvert
+- nbval
+- dask_labextension
 
 # dask
-dask==2.14.0
-distributed
-dask-gateway=0.6.1
+- dask==2.14.0
+- distributed
+- dask-gateway=0.6.1
 
 # numerical
-numba
-numpy
-pandas
+- numba
+- numpy
+- pandas
 
 # s3 utits
-s3fs
-boto3
+- s3fs
+- boto3
 
 # viz tools
-panel
-param
-python-graphviz
+- panel
+- param
+- graphviz
+
+- nbdime
 
 # testing, docs, linting
-pytest
-hypothesis
-flake8
-sphinx
-pytest-cov
-black
-isort
-importnb
-nbdime
-python-language-server
-jupyter-starters
-jupyter-lsp
-jupytext
+- pytest
+-pip:
+  - hypothesis
+  - flake8
+  - sphinx
+  - pytest-cov
+  - black
+  - isort
+  - importnb
+  - python-language-server
+  - jupyter-starters
+  - jupyter-lsp
+  - jupytext
