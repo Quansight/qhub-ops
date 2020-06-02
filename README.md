@@ -1,43 +1,7 @@
-# QHub-Ops
+# Sqribe: NDE of the future.
 
-Is tool for initializing and maintaining the state of QHub deployments
-
-## Installation:
-
-```bash
-python setup.py install
-```
-
-## Initializing the Provider Template
-
-* Amazon Web Services
-
-```bash
-qhub-ops render -c tests/assets/config_aws.yaml
-```
-
-* Digital Ocean
-
-```bash
-qhub-ops render -c tests/assets/config_do.yaml -f
-```
-
-* Google Cloud Platform
-
-```bash
-qhub-ops render -c tests/assets/config_gcp.yaml
-```
-
-After initialising the provider templates, follow the instructions
-in docs: `qhub-ops/qhub_ops/template/{{ cookiecutter.project_name }}/docs/`
-
-## Terraform Module Dependencies
-
-This project depends on the terraform modules repository:
-https://github.com/Quansight/qhub-terraform-modules
-
-# License
-
-qhub-ops is BSD3 licensed
+Sqribe is the working name for Qhub, and is the application that is served up to users.
+It will be a way for people to contibute to curated open-source documentation surrounding the
+python and pydata ecosystem, along with a portal to Sqribe's deployment tool.
 
 
