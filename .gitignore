@@ -24,5 +24,8 @@ gcp-jupyterhub
 modules
 quansight-terraform-modules
 config.yaml
+
+# NodeJS/NuxtJS Ignore
 node_modules/*
 types
+.nuxt/*
