@@ -1,8 +1,11 @@
 {
   "name": "qhome",
   "scripts": {
-    "dev": "nuxt", 
-    "generate": "nuxt generate"
+   "dev": "nuxt", 
+   "build": "nuxt build",
+   "start": "nuxt start",
+   "generate": "nuxt generate",
+   "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.9",
