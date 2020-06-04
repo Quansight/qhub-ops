@@ -27,5 +27,5 @@ config.yaml
 
 # NodeJS/NuxtJS Ignore
 node_modules/*
-types
 .nuxt/*
+yarn*
