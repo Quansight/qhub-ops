@@ -2,25 +2,29 @@
  <v-app>
   <div>
   <Navbar></Navbar>
+  </div>
+  <v-container fill-height fluid>
+  <v-row align="center"
+      justify="center">
+      <v-col align="center"
+      justify="center">
+      <div class="display-4 font-weight-regular"> Welcome to QHub </div> 
+      </v-col>
+  </v-row>
+  <v-row align="center"
+      justify="center">
   <div>
-   <v-container fluid align-center grid-list-md>
-   <v-layout row wrap>
-      <v-flex d-flex xs12 sm6 md4 align-center>
-        <v-card color="purple" dark>
-          <v-card-title primary class="title">Lorem</v-card-title>
-          <v-card-text>{{ lorem }}</v-card-text>
-        </v-card>
-      </v-flex>
-     </v-layout>
-  </v-container>
+  <DescriptionChanger></DescriptionChanger>
   </div>
-  <h1 class="text-xs-center"> Welcome to QHub </h1>
-  </div>
+  </v-row>
+</v-container>
   </v-app>
 </template>
 
 <script>
 import Navbar from "./navbar.vue";
+import DescriptionChanger from "./description.vue";
+
 export default {
   data() {
     return {
@@ -28,7 +32,8 @@ export default {
     };
   },
   components: {
-    Navbar
+    Navbar,
+    DescriptionChanger
   }
 };
 </script>

@@ -15,6 +15,7 @@ import DeploymentStepper from "./stepper.vue";
 
 export default {
   data() {
+    e1: 0;
     return {};
   },
   components: {

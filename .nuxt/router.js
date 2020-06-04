@@ -5,8 +5,10 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _552586e0 = () => interopDefault(import('../pages/blog.vue' /* webpackChunkName: "pages/blog" */))
 const _5be8cc25 = () => interopDefault(import('../pages/deploy.vue' /* webpackChunkName: "pages/deploy" */))
+const _37880c2e = () => interopDefault(import('../pages/description.vue' /* webpackChunkName: "pages/description" */))
 const _a06cf60e = () => interopDefault(import('../pages/docs.vue' /* webpackChunkName: "pages/docs" */))
 const _48908a64 = () => interopDefault(import('../pages/navbar.vue' /* webpackChunkName: "pages/navbar" */))
+const _4904b306 = () => interopDefault(import('../pages/reference.vue' /* webpackChunkName: "pages/reference" */))
 const _fc48ccfa = () => interopDefault(import('../pages/stepper.vue' /* webpackChunkName: "pages/stepper" */))
 const _305edcf8 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -35,6 +37,10 @@ export const routerOptions = {
     component: _5be8cc25,
     name: "deploy"
   }, {
+    path: "/description",
+    component: _37880c2e,
+    name: "description"
+  }, {
     path: "/docs",
     component: _a06cf60e,
     name: "docs"
@@ -42,6 +48,10 @@ export const routerOptions = {
     path: "/navbar",
     component: _48908a64,
     name: "navbar"
+  }, {
+    path: "/reference",
+    component: _4904b306,
+    name: "reference"
   }, {
     path: "/stepper",
     component: _fc48ccfa,

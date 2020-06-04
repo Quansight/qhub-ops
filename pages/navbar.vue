@@ -1,14 +1,14 @@
 <template>
   <v-toolbar
    flat
-   color="white" app>
+   color="white">
    <v-toolbar-items class="hidden-sm-and-down">
    <v-btn 
    nuxt
    text
    tag="img"
    to="/"><img src="../assets/Quansight_Logo.png" style="width:15em"></v-btn>
-   </v-toolbar-items app>  
+   </v-toolbar-items>  
    <v-spacer></v-spacer>
    <v-toolbar-items class="hidden-sm-and-down">
       <v-btn 

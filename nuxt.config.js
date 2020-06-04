@@ -14,4 +14,6 @@ export default {
     ],
   },
   vuetify: {},
+  plugins: [
+  ]
 };
