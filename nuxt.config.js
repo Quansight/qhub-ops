@@ -4,11 +4,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {}
 
-export default {
-  ...routerBase
-}
 
 export default {
+  ...routerBase,
   buildModules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/vuetify',
