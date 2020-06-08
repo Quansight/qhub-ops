@@ -22,6 +22,8 @@ export default {
   },
   vuetify: {},
   plugins: [
+     { src: '~/plugins/typed', mode: 'client' }, 
+     { src: '~/plugins/vuetify', mode: 'client' }
   ],
   generate: {},
 };
