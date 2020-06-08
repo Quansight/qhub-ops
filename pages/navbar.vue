@@ -22,7 +22,7 @@
       <v-btn 
        text
        nuxt
-       active-class to="/deploy">Deploy</v-btn>
+       active-class to="/faq">F.A.Q.</v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>

@@ -8,7 +8,7 @@
       justify="center">
       <v-col align="center"
       justify="center">
-      <div class="display-4 font-weight-regular"> Welcome to QHub </div> 
+      <div class="display-4 font-weight-regular"> This is QHub </div> 
       </v-col>
   </v-row>
   <v-row align="center"
