@@ -3,6 +3,8 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
+    "build": "nuxt build", 
+    "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
