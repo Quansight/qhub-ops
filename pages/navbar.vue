@@ -35,9 +35,8 @@ module.exports = {
   name: "Navbar",
   data: function() {
     return {
-      myImage: require('~/assets/QS_Full_Logo.svg')
+      myImage: require("~/assets/QS_Full_Logo.svg")
     };
-
   }
 };
 </script>
