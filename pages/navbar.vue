@@ -1,12 +1,13 @@
 <template>
+<no-ssr>
   <v-app-bar app flat light>
-  <no-ssr>
+  
    <a href="/">
    <v-img 
    src="/QS_Full_Logo.svg"
    contain></v-img>
    </a>
-  </no-ssr>
+
    <v-spacer></v-spacer>
    <v-toolbar-items class="hidden-sm-and-down">
       <v-btn 
@@ -23,6 +24,7 @@
        active-class to="/faq">F.A.Q.</v-btn>
     </v-toolbar-items>
 </v-app-bar>
+  </no-ssr>
 </template>
 
 <script>
