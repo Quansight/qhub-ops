@@ -1,17 +1,16 @@
 <template>
 
   <v-app-bar app flat light>
-  
-  <img src="/QS_Full_Logo.svg" />
+ 
+   <no-ssr> 
    <a href="/">
-   <no-ssr>
    <v-img 
    max-width="256px"
    max-height="256px"
-   src="/QS_Full_Logo.svg"
+   :src="myImage"
    contain></v-img>
-  </no-ssr>
    </a>
+   </no-ssr>
 
    <v-spacer></v-spacer>
    <v-toolbar-items class="hidden-sm-and-down">
@@ -35,7 +34,10 @@
 module.exports = {
   name: "Navbar",
   data: function() {
-    return {};
+    return {
+      myImage: require('~/assets/QS_Full_Logo.svg')
+    };
+
   }
 };
 </script>
