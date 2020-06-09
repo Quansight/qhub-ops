@@ -2,6 +2,7 @@
 
   <v-app-bar app flat light>
   
+  <img src="/QS_Full_Logo.svg" />
    <a href="/">
    <no-ssr>
    <v-img 
