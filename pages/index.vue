@@ -3,7 +3,8 @@
   <div>
   <Navbar></Navbar>
   </div>
-  <v-container fill-height fluid>
+  <div id="landing-part-1">
+  <v-container fill-height fluid> 
   <v-row align="center"
       justify="center">
       <v-col align="center"
@@ -18,6 +19,7 @@
   </div>
   </v-row>
 </v-container>
+</div>
   </v-app>
 </template>
 
@@ -37,3 +39,14 @@ export default {
   }
 };
 </script>
+
+<style>
+   #landing-part-1 {
+    /* background-color: #fffdd0;  */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+</style>

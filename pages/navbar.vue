@@ -1,13 +1,13 @@
 <template>
 
-  <v-app-bar app flat light>
+  <v-app-bar app flat fixed color="primary" light>
  
    <no-ssr> 
    <!-- TODO: Change to base path -->
    <a href="/qhub-ops/">
    <v-img 
-   max-width="256px"
-   max-height="256px"
+   max-width="180px"
+   max-height="180px"
    :src="myImage"
    contain></v-img>
    </a>
@@ -18,14 +18,20 @@
       <v-btn 
        nuxt
        text
+       ripple
+       color="white"
        active-class to="/docs">Documentation</v-btn>
       <v-btn 
        text
        nuxt
+       ripple
+       color="white"
        active-class to="/blog">Blog</v-btn>
       <v-btn 
        text
        nuxt
+       ripple
+       color="white"
        active-class to="/faq">F.A.Q.</v-btn>
     </v-toolbar-items>
 </v-app-bar>
@@ -36,7 +42,7 @@ module.exports = {
   name: "Navbar",
   data: function() {
     return {
-      myImage: require("~/assets/QS_Full_Logo.svg")
+      myImage: require("~/assets/QS_Full_Transparent.svg")
     };
   }
 };
