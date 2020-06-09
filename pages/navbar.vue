@@ -3,8 +3,6 @@
   <a href="/">
    <v-img 
    src="/QS_Full_Logo.svg"
-   max-height="256px"
-   max-width="256px"
    contain></v-img>
   </a>
    <v-spacer></v-spacer>
