@@ -1,11 +1,9 @@
 <template>
   <v-app-bar app flat light>
   <a href="/">
-  <no-ssr>
    <v-img 
    src="/QS_Full_Logo.svg"
    contain></v-img>
-  </no-ssr>
   </a>
    <v-spacer></v-spacer>
    <v-toolbar-items class="hidden-sm-and-down">
