@@ -1,13 +1,24 @@
 <template>
 <v-app>
 <div><Navbar></Navbar></div>
-<div>
+
+<v-container fluid>
+  <br>
+  <br>
+  <br>
+<div class="text-xs-center display-2 font-weight-thin"> Frequently Asked Questions </div> 
+<v-row align="center"
+justify="center">
+<v-col align="center"
+justify="center">
 <ul>
-<li> <p> What is QHub? </p> </li>
-<li> <p> What makes Qhub different, than, say, JupyterHub? </p> </li>
-<li> <p> Can I use Qhub offline? </p> </li>
+<li> What is QHub? </li>
+<li> What makes Qhub different, than, say, JupyterHub? </li>
+<li> Can I use Qhub offline? </li>
 </ul>
-</div>
+</v-col>
+</v-row>
+</v-container>
 </v-app>
 </template>
 
