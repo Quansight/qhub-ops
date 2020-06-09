@@ -3,7 +3,8 @@
   <v-app-bar app flat light>
  
    <no-ssr> 
-   <a href="/">
+   <!-- TODO: Change to base path -->
+   <a href="/qhub-ops/">
    <v-img 
    max-width="256px"
    max-height="256px"
