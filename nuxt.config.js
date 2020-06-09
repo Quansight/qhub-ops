@@ -6,6 +6,10 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
   ...routerBase,
+  css: [
+    '@/assets/QS_Full_Logo.svg',
+    'static/QS_Full_Logo.svg'
+  ],
   buildModules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/vuetify',
