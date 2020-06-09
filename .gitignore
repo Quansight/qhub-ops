@@ -30,3 +30,4 @@ node_modules/*
 .nuxt/*
 yarn*
 dist/
+.DS_Store

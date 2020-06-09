@@ -1,14 +1,12 @@
 <template>
-  <v-toolbar
-   flat
-   color="white">
-   <v-toolbar-items class="hidden-sm-and-down">
-   <v-btn 
-   nuxt
-   text
-   tag="img"
-   to="/"><img src="../assets/Quansight_Logo.png" style="width:15em"></v-btn>
-   </v-toolbar-items>  
+  <v-app-bar app flat light>
+  <a href="/">
+   <v-img 
+   src="/QS_Full_Logo.svg"
+   max-height="256px"
+   max-width="256px"
+   contain></v-img>
+  </a>
    <v-spacer></v-spacer>
    <v-toolbar-items class="hidden-sm-and-down">
       <v-btn 
@@ -24,7 +22,7 @@
        nuxt
        active-class to="/faq">F.A.Q.</v-btn>
     </v-toolbar-items>
-  </v-toolbar>
+</v-app-bar>
 </template>
 
 <script>
