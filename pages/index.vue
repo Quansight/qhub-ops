@@ -9,7 +9,7 @@
       <v-col align="center"
       justify="center">
     <transition name="fade">
-      <div v-if="show" class="display-4"> This is QHub </div> 
+      <div class="display-4"> This is QHub </div> 
     </transition>
       </v-col>
   </v-row>
