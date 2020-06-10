@@ -6,6 +6,12 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
   ...routerBase,
+  head: {
+    link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat+Alternates' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato'}
+    ]
+  },
   buildModules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/vuetify',
@@ -20,10 +26,14 @@ export default {
       "markdown-it-attrs",
     ],
   },
-  vuetify: {},
   plugins: [
      { src: '~/plugins/typed', mode: 'client' }, 
      { src: '~/plugins/vuetify', mode: 'client' }
   ],
   generate: {},
+  vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    defaultAssets: false,
+    treeShake: true
+  },
 };
