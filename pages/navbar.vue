@@ -32,6 +32,12 @@
        ripple
        color="white"
        active-class to="/faq">F.A.Q.</v-btn>
+      <v-btn 
+       text
+       nuxt
+       ripple
+       color="white"
+       active-class to="/deploy">Deploy</v-btn>
     </v-toolbar-items>
 </v-app-bar>
 </client-only>

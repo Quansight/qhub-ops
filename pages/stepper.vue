@@ -1,47 +1,104 @@
 <template>
-  <v-stepper v-model="e6" vertical>
-    <v-stepper-step :complete="e6 > 1" step="1">
-      Select an app
-      <small>Summarize if needed</small>
-    </v-stepper-step>
+ <v-stepper v-model="e1">
+    <v-stepper-header>
+      <v-stepper-step :complete="e1 > 1" step="1">Welcome</v-stepper-step>
 
-    <v-stepper-content step="1">
-      <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-      <v-btn color="primary" @click="e6 = 2">Continue</v-btn>
-      <v-btn text>Cancel</v-btn>
-    </v-stepper-content>
+      <v-divider></v-divider>
 
-    <v-stepper-step :complete="e6 > 2" step="2">Configure analytics for this app</v-stepper-step>
+      <v-stepper-step :complete="e1 > 2" step="2">Project Setup</v-stepper-step>
 
-    <v-stepper-content step="2">
-      <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-      <v-btn color="primary" @click="e6 = 3">Continue</v-btn>
-      <v-btn text>Cancel</v-btn>
-    </v-stepper-content>
+      <v-divider></v-divider>
 
-    <v-stepper-step :complete="e6 > 3" step="3">Select an ad format and name ad unit</v-stepper-step>
+      <v-stepper-step :complete="e1 > 3" step="3">Security Details</v-stepper-step>
 
-    <v-stepper-content step="3">
-      <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-      <v-btn color="primary" @click="e6 = 4">Continue</v-btn>
-      <v-btn text>Cancel</v-btn>
-    </v-stepper-content>
+      <v-divider></v-divider>
 
-    <v-stepper-step step="4">View setup instructions</v-stepper-step>
-    <v-stepper-content step="4">
-      <v-card color="grey lighten-1" class="mb-5" height="200px"></v-card>
-      <v-btn color="primary" @click="e6 = 1">Continue</v-btn>
-      <v-btn text>Cancel</v-btn>
-    </v-stepper-content>
+      <v-stepper-step :complete="e1 > 4" step="4">Users & Groups</v-stepper-step>
+
+      <v-divider></v-divider>
+
+      <v-stepper-step :complete="e1 > 5" step="5">Provider Options</v-stepper-step>
+    </v-stepper-header>
+
+    <v-stepper-items>
+      <v-stepper-content step="1">
+      <GeneralOptionsPanel></GeneralOptionsPanel>
+        <v-btn
+          color="primary"
+          @click="e1 = 2"
+        >
+          Next
+        </v-btn>
+      </v-stepper-content>
+
+      <v-stepper-content step="2">
+        <v-card
+          class="mb-12"
+          color="grey lighten-1"
+          height="200px"
+        ></v-card>
+
+        <v-btn
+          color="primary"
+          @click="e1 = 3"
+        >
+          Next
+        </v-btn>
+
+        <v-btn text @click="e1 = 1">Previous</v-btn>
+      </v-stepper-content>
+
+      <v-stepper-content step="3">
+        <v-card
+          class="mb-12"
+          color="grey lighten-1"
+          height="200px"
+        ></v-card>
+
+        <v-btn
+          color="primary"
+          @click="e1 = 4"
+        >
+          Next
+        </v-btn>
+
+        <v-btn 
+        text
+        @click="e1 = e1 -1">
+        Previous</v-btn>
+      </v-stepper-content>
+    </v-stepper-items>
   </v-stepper>
 </template>
-<script>
-export default {
-  name: "DependencyStepper",
-  data() {
+<script lang="ts">
+import Vue, { PropOptions } from 'vue';
+import GeneralOptionsPanel from "./generalPanel.vue";
+
+interface User {
+  firstName: string
+  lastName: number
+}
+export default Vue.extend({
+  name: 'DependencyStepper',
+  props: {
+    user: {
+      type: Object,
+      required: true
+    } as PropOptions<User>
+  },
+  data () {
     return {
-      e6: 1
-    };
+      message: 'This is a message',
+      e1: 1
+    }
+  },
+  components: {
+    GeneralOptionsPanel
+  },
+  computed: {
+    fullName (): string {
+      return `${this.user.firstName} ${this.user.lastName}`
+    }
   }
-};
+});
 </script>

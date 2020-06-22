@@ -23,6 +23,18 @@ export interface IPropsGeneralOptions {
 }
 
 /**
+ * These are the descriptors that go to the infopanel
+ * alongside the options selected above. 
+ */
+export interface IPropsGeneralOptionsDescriptions {
+    project_name_desc: string;
+    provider_logo_filepath: string[];
+    provider_descriptions: string[];
+    ci_cd_logo_filepath: string[];
+    ci_cd_descriptions: string[];
+}
+
+/**
  * These are the authentication types that will be used
  * in order to show who gets access to the systems at hand
  */
