@@ -13,6 +13,8 @@
     <v-select
       v-model="select"
       :items="provider_options"
+      :value="provider_options"
+      @change="chooseProvider"
       hint="This is the provider you choose"
       label="Provider"
       required
@@ -36,7 +38,12 @@ export default Vue.extend({
     options: {
         type: Object,
         required: true
-    } as PropOptions<IPropsGeneralOptions>
+    } as PropOptions<IPropsGeneralOptions>,
+  },
+  methods: {
+    chooseProvider(value: string) {
+      this.$emit('chooseProvider','value')
+    }
   },
   data () {
     return {

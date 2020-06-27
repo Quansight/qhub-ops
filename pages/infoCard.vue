@@ -4,18 +4,9 @@
   <v-row align="center"
       justify="center">
       <v-col>
-  <transition name="fade">
-    <!-- <div class="text-center"> -->
-    <p v-if="show">{{ options.project_name_desc }}</p>
-  <v-img 
-   v-if="showImage"
-   :src="myImage"
-   height="200px"
-   max-width="600px">
-  </v-img>
-    <!-- </div> -->
+  <transition name="fade" v-bind="$attrs" v-on="$listeners">
+    <slot name="project_name_description"></slot>
   </transition>
-
   </v-col>
   </v-row>
 </v-container>
@@ -42,6 +33,8 @@ export default Vue.extend({
         required: false
     } as PropOptions<IPropsGeneralOptionsDescriptions>
   },
+  methods: {
+      },
   data () {
     return {
       show: false,

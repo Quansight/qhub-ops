@@ -84,7 +84,7 @@ export default Vue.extend({
     user: {
       type: Object,
       required: true
-    } as PropOptions<User>
+    } as PropOptions<User>,
   },
   data () {
     return {

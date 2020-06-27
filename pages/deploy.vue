@@ -1,11 +1,16 @@
 <template>
 <v-app>
 <Navbar></Navbar>
-<div class="content">
-<v-container>
-<DeploymentStepper :user=TestUser></DeploymentStepper>
+<v-container fill-height>
+  
+  <v-row align="center"
+      justify="center">
+ <v-col xs={12}>
+<DeploymentStepper></DeploymentStepper>
+</v-col>
+  </v-row>
 </v-container>
-</div>
+
 </v-app>
 </template>
 
@@ -16,11 +21,7 @@ import DeploymentStepper from "./stepper.vue";
 export default {
   data() {
     return {
-      TestUser: {
-        firstName: "Anirrudh",
-        lastName: 0
-      }
-    };
+          };
   },
   components: {
     Navbar,
@@ -30,8 +31,3 @@ export default {
 </script>
 
 
-<style scoped>
-.content {
-  padding-top: 260px; 
-}
-</style>
