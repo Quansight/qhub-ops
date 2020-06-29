@@ -15,6 +15,7 @@
       :items="provider_options"
       :value="provider_options"
       @change="chooseProvider"
+      @click="chooseMessage"
       hint="This is the provider you choose"
       label="Provider"
       required
@@ -23,6 +24,8 @@
     <v-select
       v-model="select"
       :items="ci_cd_options"
+      :value="ci_cd_options"
+      @change="chooseCiCd"
       label="CI/CD"
     ></v-select>
   </v-form>
@@ -41,14 +44,21 @@ export default Vue.extend({
     } as PropOptions<IPropsGeneralOptions>,
   },
   methods: {
+    chooseCiCd(value: string) {
+      console.log(value)
+      this.$emit('chooseCiCd', value)
+    },
     chooseProvider(value: string) {
-      this.$emit('chooseProvider','value')
+      this.$emit('chooseProvider',value)
+    },
+    chooseMessage() {
+      this.$emit('chooseMessage')
     }
   },
   data () {
     return {
-        provider_options: this.options.provider_options,
-        ci_cd_options: this.options.ci_cd_options
+      provider_options: this.options.provider_options,
+      ci_cd_options: this.options.ci_cd_options
     }
   },
   computed: {
