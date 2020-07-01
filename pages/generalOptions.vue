@@ -27,6 +27,7 @@
       :value="ci_cd_options"
       @change="chooseCiCd"
       label="CI/CD"
+      clear
     ></v-select>
   </v-form>
 </template>
