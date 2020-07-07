@@ -113,6 +113,7 @@ module "qhub" {
 
   name      = "qhub"
   namespace = var.environment
+  kubessh-namespace = var.kubessh-environment
 
   home-pvc        = module.kubernetes-nfs-mount.persistent_volume_claim.name
   conda-store-pvc = module.kubernetes-conda-store-mount.persistent_volume_claim.name
@@ -133,6 +134,10 @@ module "qhub" {
 
   dask-gateway-overrides = [
     file("dask-gateway.yaml")
+  ]
+
+  kubessh-overrides = [
+    file("kubessh.yaml")
   ]
 
   dependencies = [

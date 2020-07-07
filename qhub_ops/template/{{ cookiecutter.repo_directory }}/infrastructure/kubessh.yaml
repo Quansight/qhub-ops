@@ -1,0 +1,10 @@
+hostKey: |
+  -----BEGIN RSA PRIVATE KEY-----
+  key goes here
+  -----END RSA PRIVATE KEY-----
+auth:
+  github:
+    allowedUsers:
+    {% for user in cookiecutter.security.users %}
+      - {{user}}
+    {% endfor %}

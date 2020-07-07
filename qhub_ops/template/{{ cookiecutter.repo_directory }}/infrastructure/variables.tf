@@ -8,6 +8,11 @@ variable "environment" {
   default = "dev"
 }
 
+variable "kubessh-environment" {
+  type    = string
+  default = "mykubessh"
+}
+
 {% if cookiecutter.provider == "aws" %}
 variable "region" {
   type    = string
