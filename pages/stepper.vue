@@ -22,7 +22,6 @@
 
     <v-stepper-items>
       <v-stepper-content step="1">
-      
         <v-btn
           color="primary"
           @click="e1 = 2"
@@ -30,7 +29,6 @@
           Next
         </v-btn>
       </v-stepper-content>
-
       <v-stepper-content step="2">
         <GeneralOptionsPanel></GeneralOptionsPanel>
         <v-btn
@@ -44,8 +42,6 @@
       </v-stepper-content>
 
       <v-stepper-content step="3">
-        
-
         <v-btn
           color="primary"
           @click="e1 = 4"

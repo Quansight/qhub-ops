@@ -125,3 +125,10 @@ export interface QConfiguration {
     groups: { [groupname: string] : number },
     cloud_provider: IPropsAWSDetails | IPropsGCPDetails | IPropsDODetails
 }
+
+export interface IPropsUserMap {
+    username: string, 
+    uid: number,
+    primary_group: string[],
+    secondary_group?: string[]
+ }
