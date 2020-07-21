@@ -27,6 +27,7 @@ hub:
   extraConfig:
     01-spawner: |
       QHUB_USER_MAPPING = {{ cookiecutter.security.users }}
+      QHUB_GPU_INSTANCES = {{ cookiecutter.gpus.count }}
       QHUB_GROUP_MAPPING = {{ cookiecutter.security.groups }}
       QHUB_PROFILES = {{ cookiecutter.profiles.jupyterlab }}
 
@@ -107,6 +108,11 @@ hub:
           profile['kubespawner_override']['gid'] = primary_gid
           profile['kubespawner_override']['supplemental_gids'] = secondary_gids
           profile['kubespawner_override']['fs_gid'] = primary_gid
+
+          if QHUB_GPU_INSTANCES is not None:
+            profile['kubespawner_override']['extra_resource_limits'] = {
+              'nvidia.com/gpu': QHUB_GPU_INSTANCES
+            }
           return profile
 
       def qhub_list_available_profiles(username):
