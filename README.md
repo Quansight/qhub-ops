@@ -1,3 +1,5 @@
+Please direct all issues and pull requests to https://github.com/Quansight/qhub. Project has unified under this single directory.
+
 # QHub-Ops
 
 Is a tool for initializing and maintaining the state of QHub
